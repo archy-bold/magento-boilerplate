@@ -1,7 +1,7 @@
 <h1>Magento Boilerplate</h1>
 
-Author: Jason Alvis<br />
-Author Email: hello@jasonalvis.co.uk<br />
+Author: Simon Archer / Jason Alvis (forked)<br />
+Author Email: hello@archybold.com / hello@jasonalvis.co.uk<br />
 Version: 0.0.1<br />
 License: Free General Public License (GPL)<br />
 
@@ -27,15 +27,8 @@ Note: They can be added back in if you need them by simply removing the line of 
 jQuery v1.10.2 minified in no conflict mode is included as default, you can change this to include a more up to date version if you wish. It gets included at the very bottom of the dom just like it should be.<br /><br />
 This improves performance issues particularly on mobile devices as when a browser hits a script tag it actually waits for that entire asset to download before it proceeds, if it's in the head your going to block everything that renders visually on your page from starting.
 
-<h3>Grunt</h3>
-Grunt is all setup and ready to go. It comes with the following tasks:
-
-<a href="https://github.com/Ensighten/grunt-spritesmith" target="_blank">Sprite Generation</a><br />
-<a href="https://github.com/sindresorhus/grunt-sass" target="_blank">LibSass</a><br />
-<a href="https://github.com/gruntjs/grunt-contrib-jshint" target="_blank">JSHint</a><br />
-<a href="https://github.com/gruntjs/grunt-contrib-concat" target="_blank">Concat</a><br />
-<a href="https://github.com/gruntjs/grunt-contrib-uglify" target="_blank">Uglify</a><br />
-<a href="https://github.com/gruntjs/grunt-contrib-watch" target="_blank">Watch</a>
+<h3>Gulp</h3>
+Gulp is all setup and ready to go. It comes with tasks to build the CSS from SCSS and concatenates and uglifies the javascript.
 
 <h2>Installation</h2>
 Drop in the directories app and skin within your Magento hierarchy e.g:<br /><br />
@@ -43,9 +36,9 @@ magento > public_html > app<br />
 magento > public_html > skin<br /><br />
 Then you will need to change the package name in the admin panel to render the new package you have just installed (system > configuration > design > package).
 
-<h2>Using Grunt</h2>
-First off I'm going to assume you have successfully installed Node.js and Grunt, if you haven't you need to do this first.
-First install <a href="http://nodejs.org/download/" target="_blank">Node.js</a> then install <a href="http://gruntjs.com/getting-started" target="_blank">Grunt</a>. Once you've done that proceed below.
+<h2>Using Gulp</h2>
+First off I'm going to assume you have successfully installed Node.js and Gulp, if you haven't you need to do this first.
+First install <a href="http://nodejs.org/download/" target="_blank">Node.js</a> then install <a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md" target="_blank">Gulp</a>. Once you've done that proceed below.
 
 cd into the skin theme directory like so
 
@@ -59,10 +52,10 @@ Install the project dependencies
 npm install
 ```
 
-Make changes to your files (sass and js) then you'll want to run grunt to initiate the tasks
+Make changes to your files (sass and js) then you'll want to run gulp to initiate the tasks
 
 ```shell
-grunt
+gulp
 ```
 
 Take it a step further and install the browser add-on <a href="http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-" target="_blank">LiveReload</a>. With LiveReload you won’t have to go back to your browser and refresh the page. Page refreshes happen automatically and in the case of CSS, new styles are injected without a page refresh.

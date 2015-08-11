@@ -1,0 +1,48 @@
+$svg-sprite: (
+	total-width: {{spriteWidth}},
+	total-height: {{spriteHeight}},
+	image: '../images/sprites/{{sprite}}',
+	{{#shapes}}
+	{{name}}: (
+		offset-x: {{position.absolute.x}},
+		offset-y: {{position.absolute.y}},
+		width: {{width.outer}},
+		height: {{height.outer}}
+	),
+	{{/shapes}}
+);
+
+@mixin svg-size($image) {
+	background-size: map-get($svg-sprite, 'total-width') * 1px map-get($svg-sprite, 'total-height') * 1px;
+}
+
+@mixin svg-width($image) {
+	width: map-get(map-get($svg-sprite, $image), 'width') * 1px;
+}
+
+@mixin svg-height($image) {
+	height: map-get(map-get($svg-sprite, $image), 'height') * 1px;
+}
+
+@mixin svg-position($image) {
+	background-position: map-get(map-get($svg-sprite, $image), 'offset-x') * 1px map-get(map-get($svg-sprite, $image), 'offset-y') * 1px;
+}
+
+@mixin svg-image($image) {
+	background-image: url(map-get($svg-sprite, 'image'));
+}
+
+@mixin svg($image, $size: true) {
+	@include svg-image($image);
+	@include svg-position($image);
+	background-repeat: no-repeat;
+
+	@if $size {
+		@include svg-width($image);
+		@include svg-height($image);
+	}
+
+	.no-svg & {
+		background-image: url('../images/sprites/{{#png}}{{sprite}}{{/png}}')
+	}
+}

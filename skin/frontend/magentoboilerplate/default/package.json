@@ -15,9 +15,14 @@
     "author": "Simon Archer/Jason Alvis",
     "license": "GPL",
     "bugs": {
-        "url": "https://github.com/jasonalvis/magento-boilerplate/issues"
+        "url": "https://github.com/archy-bold/magento-boilerplate/issues"
     },
-    "homepage": "https://github.com/jasonalvis/magento-boilerplate",
+    "homepage": "https://github.com/archy-bold/magento-boilerplate",
     "dependencies": {
+        "gulp": "^3.9.0",
+        "gulp-concat": "^2.6.0",
+        "gulp-sass": "^2.0.1",
+        "gulp-uglify": "^1.2.0",
+        "gulp-watch": "^4.2.4"
     }
 }

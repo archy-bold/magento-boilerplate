@@ -23,7 +23,8 @@
                 top: 50%;
                 right: 5px;
                 margin-top: -5px;
-                @include sprite-2x($sprite__icon-plus, $sprite-2x__icon-plus);
+                // @include sprite-2x($sprite__icon-plus, $sprite-2x__icon-plus);
+                @include svg(icon-plus);
             }
         }
 
@@ -36,7 +37,8 @@
     &.accordion-open {
         > dl {
             > dt.open span:after {
-                 @include sprite-2x($sprite__icon-minus, $sprite-2x__icon-minus);
+                // @include sprite-2x($sprite__icon-minus, $sprite-2x__icon-minus);
+                @include svg(icon-minus);
             }
 
             > dd.open {

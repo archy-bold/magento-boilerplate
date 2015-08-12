@@ -31,11 +31,13 @@
             top: 50%;
             right: 15px;
             margin-top: -5px;
-            @include sprite-2x($sprite__icon-plus-white, $sprite-2x__icon-plus-white);
+            // @include sprite-2x($sprite__icon-plus-white, $sprite-2x__icon-plus-white);
+            @include svg(icon-plus-white);
         }
 
         &.active span:after {
-            @include sprite-2x($sprite__icon-minus-white, $sprite-2x__icon-minus-white);
+            // @include sprite-2x($sprite__icon-minus-white, $sprite-2x__icon-minus-white);
+            @include svg(icon-minus-white);
         }
 
         @include bp(min-width, $large-min) {

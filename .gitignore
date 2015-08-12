@@ -28,10 +28,10 @@ skin/*
 skin/frontend/*
 !skin/frontend/magentoboilerplate/
 skin/frontend/magentoboilerplate/default/css/*
-# Ignore SVG sprite stuff 
+# Ignore sprites 
 skin/frontend/magentoboilerplate/default/images/sprites/sprite.view.html
 skin/frontend/magentoboilerplate/default/images/sprites/svg-sprite-*
-skin/frontend/magentoboilerplate/default/images/sprites/svg/*
+skin/frontend/magentoboilerplate/default/images/sprites/sprite-*
 skin/frontend/magentoboilerplate/default/scss/utilities/_svg-sprites.scss
 
 # Ignore sass cache

@@ -30,6 +30,14 @@ This improves performance issues particularly on mobile devices as when a browse
 <h3>Gulp</h3>
 Gulp is all setup and ready to go. It comes with tasks to build the CSS from SCSS and concatenates and uglifies the javascript.
 
+It also generates PNG and SVG sprite sheets. Simply drop SVGs into the `skin/frontend/magentoboilerplate/default/images/sprites/svg` directory and use the following mixin in SASS.
+
+```SCSS
+@include svg(svg-filename);
+```
+
+Where svg-filename is the name of the SVG file without the extension, this falls back to PNGs for browsers without SVG support. If you don't want to use SVGs, full retina PNG support is offered too. Just put your double-sized PNGs into the `skin/frontend/magentoboilerplate/default/images/sprites/source-2x` directory.
+
 <h2>Installation</h2>
 Drop in the directories app and skin within your Magento hierarchy e.g:<br /><br />
 magento > public_html > app<br />
